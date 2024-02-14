@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 import { errorHandler } from "@middlewares/index";
-import routes, { RestAuth } from "@routes/index";
+import routes from "@routes/index";
 import { ForbiddenError } from "@components/errors";
 import { App } from "@config/index";
 
@@ -65,7 +65,7 @@ app.get("/", (_: any, res: Response) => {
 	res.send("Welcome to VZY Backend Test");
 });
 
-app.use(`${v1}`, RestAuth, routes);
+app.use(`${v1}`, routes);
 
 app.use(errorHandler);
 

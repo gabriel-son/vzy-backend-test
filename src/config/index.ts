@@ -11,6 +11,7 @@ if (fs.existsSync(OVERRIDE_PATH)) {
 	loadOverrides({
 		path: OVERRIDE_PATH,
 		debug: true,
+		encoding: "UTF-8",
 	});
 }
 

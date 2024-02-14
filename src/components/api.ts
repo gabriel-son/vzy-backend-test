@@ -118,7 +118,7 @@ export const defaultRequestHandler = (controllerFn: any, options: Partial<Valida
 		try {
 			const data = validateRequest(req, { ...defaultOptions, ...options });
 			const result = await controllerFn(data, (req as any).user);
-			const response = new ApiResponse(result.data, result.message || "Request successful");
+			const response = new ApiResponse(result.data, result.message || "Request successful", result.code);
 			res.status(response.code).json(response);
 		} catch (error) {
 			throw error;

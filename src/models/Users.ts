@@ -1,7 +1,7 @@
 import Mongo, { SCHEMA_OPTIONS } from "@connections/mongodb";
 import { MyGoose } from "@libs/mongoose";
 import { ROLES, SIGNUPTYPES } from "@components/enums";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { Field, ObjectType } from "type-graphql";
 import { ReturnModelType, pre, prop, getModelForClass } from "@typegoose/typegoose";
 

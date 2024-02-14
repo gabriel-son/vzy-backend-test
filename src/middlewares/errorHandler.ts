@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 
 export const errorHandler = (err: any, req: Request, res: Response, next: NextFunction) => {
+	console.log("I AM IN HERE", err);
 	// Validation errors from express-validator
 	if (err && err.array) {
 		const errors = err.array();

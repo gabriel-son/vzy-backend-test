@@ -1,7 +1,7 @@
 import Mongo, { SCHEMA_OPTIONS } from "@connections/mongodb";
 import { MyGoose } from "@libs/mongoose";
 import { Field, ObjectType } from "type-graphql";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import { ReturnModelType, prop, pre, getModelForClass } from "@typegoose/typegoose";
 
 @pre<IRefreshToken>("save", async function (next) {

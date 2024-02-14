@@ -9,11 +9,10 @@ setGlobalOptions({
 
 @ObjectType()
 export class MyGoose {
-	@Field({ nullable: true })
+	@Field({ nullable: false })
 	public _id!: string;
 
 	@prop({ default: Date.now })
-	@Field({ nullable: true })
 	public createdAt!: Date;
 
 	@prop({ default: Date.now })
