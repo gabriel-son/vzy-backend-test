@@ -55,14 +55,7 @@ const Config = Object.freeze({
 			production: dbConfig,
 		},
 	},
-	Stripe: {
-		clientSecret: getEnv<string>("STRIPE_CLIENT_SECRET"),
-	},
-	pagination: {
-		limit: getEnv<string>("PAGINATE_LIMIT", 10),
-		max_limit: getEnv<string>("PAGINATE_MAX_LIMIT", 50),
-		offset: getEnv<string>("PAGINATE_OFFSET", 0),
-	},
+
 });
 
 export = Config;
