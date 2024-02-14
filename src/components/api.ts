@@ -15,7 +15,7 @@ export enum ErrorTypes {
 	AUTH = "authenication",
 }
 
-export type MiddlewareSignature = (req: express.Request, res: express.Response, next?: express.NextFunction) => any;
+export type MiddlewareSignature = (req: express.Request, res: express.Response, next: express.NextFunction) => any;
 
 export type SubRouter = [PathParams, express.Router];
 

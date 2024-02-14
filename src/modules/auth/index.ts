@@ -37,7 +37,6 @@ class Auth {
 	}
 	public async localLogin(payload: LocalLoginPayload) {
 		try {
-			console.log("PAYLOAD IS HERE", payload);
 			const { email } = payload;
 			const user = await User.getUser({ email });
 			if (user) {

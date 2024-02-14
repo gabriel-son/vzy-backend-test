@@ -1,15 +1,9 @@
 import express from "express";
-import { BearerAuth, authenticateAccessToken } from "@middlewares/authentication";
 import authRouter from "./auth";
+import userRouter from "./user";
 const router = express.Router();
 
 router.use("/auth", authRouter);
-
-const RestAuth = BearerAuth({
-	strategy: authenticateAccessToken,
-	excludedPaths: {
-		post: [/^\/auth(\/?)/],
-	},
-});
+router.use("/user", userRouter);
 
 export default router;
