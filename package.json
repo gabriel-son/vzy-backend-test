@@ -1,0 +1,60 @@
+{
+	"name": "vzy-backend-test",
+	"version": "1.0.0",
+	"description": "",
+	"main": "application/index.js",
+	"scripts": {
+		"start": "npm run build && cross-env NODE_ENV=production application/serve.js",
+		"start:development": "npm run build && cross-env NODE_ENV=development node application/serve.js",
+		"build": "npm run preinstall && tsc -p tsconfig.json",
+		"lint": "tslint -p tsconfig.json",
+		"postbuild": "link-module-alias",
+		"preinstall": "link-module-alias clean"
+	},
+	"keywords": [],
+	"author": "Chia Gabriel",
+	"license": "ISC",
+	"_moduleAliasIgnoreWarning": true,
+	"_moduleAliases": {
+		"@controllers": "./application/controllers",
+		"@libs": "./application/libs",
+		"@config": "./application/config",
+		"@connections": "./application/connections",
+		"@routes": "./application/routes",
+		"@models": "./application/models",
+		"@modules": "./application/modules",
+		"@components": "./application/components",
+		"@middlewares": "./application/middlewares"
+	},
+	"dependencies": {
+		"@types/bcryptjs": "^2.4.6",
+		"@types/express": "^4.17.21",
+		"bcryptjs": "^2.4.3",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.4",
+		"express": "^4.18.2",
+		"express-rate-limit": "^7.1.5",
+		"express-validator": "^7.0.1",
+		"jsonwebtoken": "^9.0.2",
+		"mongoose": "^8.1.2",
+		"stripe": "^14.16.0",
+		"winston": "^3.11.0"
+	},
+	"devDependencies": {
+		"@types/bcrypt": "^5.0.2",
+		"@types/cors": "^2.8.17",
+		"@types/jsonwebtoken": "^9.0.5",
+		"@types/node": "^20.11.17",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-prettier": "^5.1.3",
+		"link-module-alias": "^1.2.0",
+		"nodemon": "^3.0.3",
+		"prettier": "^3.2.5",
+		"ts-node": "^10.9.2",
+		"tslint": "^6.1.3",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^5.3.3"
+	}
+}

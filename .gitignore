@@ -1,0 +1,9 @@
+# ---------------------------------------------------
+## SETTING FILES AND FOLDERS NOT NEEDED IN PRODUCTION
+# ---------------------------------------------------
+
+node_modules/
+dist
+logs
+application
+*.env
