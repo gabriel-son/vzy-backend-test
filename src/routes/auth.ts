@@ -1,7 +1,10 @@
-import { localSignup } from "@controllers/index";
+import { localSignup, localLogin } from "@controllers/index";
 import * as Api from "@components/api";
-import { LocalSignup } from "@middlewares/validators/Auth";
+import { LocalSignup, LocalLogin } from "@middlewares/validators/Auth";
 
 export default Api.load({
-	post: [["/signup", [], [...LocalSignup], localSignup]],
+	post: [
+		["/signup", [], [...LocalSignup], localSignup],
+		["/login", [], [...LocalLogin], localLogin],
+	],
 });

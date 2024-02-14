@@ -24,7 +24,8 @@
 		"@models": "./application/models",
 		"@modules": "./application/modules",
 		"@components": "./application/components",
-		"@middlewares": "./application/middlewares"
+		"@middlewares": "./application/middlewares",
+		"@utils": "./application/utils"
 	},
 	"dependencies": {
 		"@types/bcryptjs": "^2.4.6",

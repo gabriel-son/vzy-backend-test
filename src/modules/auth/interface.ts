@@ -4,3 +4,8 @@ export interface LocalSignupPayload {
 	email: string;
 	password: string;
 }
+
+export interface LocalLoginPayload {
+	email: string;
+	password: string;
+}

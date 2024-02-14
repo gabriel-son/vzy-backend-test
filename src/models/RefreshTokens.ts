@@ -39,5 +39,5 @@ export class IRefreshToken extends MyGoose {
 
 export const RefreshToken = getModelForClass(IRefreshToken, {
 	existingConnection: Mongo.ActiveConnection,
-	schemaOptions: { ...SCHEMA_OPTIONS, collection: "refreshTokens" },
+	schemaOptions: { ...SCHEMA_OPTIONS, collection: "refreshToken" },
 });
